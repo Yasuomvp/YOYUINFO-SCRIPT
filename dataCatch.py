@@ -46,3 +46,6 @@ if __name__ == '__main__':
 
         sql = f'insert into games values({j["id"]},\'{title}\',\'{j["thumbnail"]}\',\'{short_description}\',\'{j["game_url"]}\',\'{j["genre"]}\',\'{j["platform"]}\',\'{publisher}\',\'{developer}\',\'{j["release_date"]}\',\'{j["freetogame_profile_url"]}\');'
         cursor.execute(sql)
+        print(j["title"]+" 执行成功")
+
+    conn.commit()
